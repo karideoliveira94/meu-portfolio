@@ -8,6 +8,7 @@ import FigmaPage from './pages/Figma';
 import CertificadosPage from './pages/Certificados';
 import ProjetosPage from './pages/Projetos';
 import SobrePage from './pages/Sobre';
+import Home from "./pages/Home";
 import './styles/Layout.css';
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
             <Route path="/certificados" element={<CertificadosPage />} />
             <Route path="/projetos" element={<ProjetosPage />} />
             <Route path="/sobre" element={<SobrePage />} />
+            <Route path="/" element={<Home />} />
           </Routes>
 
           <Footer />

@@ -1,24 +1,36 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Header.css';
 import userAvatar from '../assets/user-karina.jpeg';
-import logoColapsado from '../assets/logo1.png'; 
-import logoExpandido from '../assets/logo2.png'; // <-- importe o segundo logo
+import logoColapsado from '../assets/logo1.png';
+import logoExpandido from '../assets/logo2.png';
 import { FaArrowRight, FaArrowLeft, FaCog } from 'react-icons/fa';
 
 const Header = ({ onToggleSidebar, isSidebarCollapsed, onToggleRightSidebar }) => {
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate('/'); // Redireciona para a Home
+  };
+
   return (
     <header className="header-fenox">
-      <div className={`header-logo ${isSidebarCollapsed ? 'collapsed' : 'expanded'}`}>
+      <div
+        className={`header-logo ${isSidebarCollapsed ? 'collapsed' : 'expanded'}`}
+        onClick={handleLogoClick}
+        style={{ cursor: 'pointer' }} // deixa o cursor como "clique"
+      >
         <img
-          src={isSidebarCollapsed ? logoColapsado : logoExpandido} // <-- troca o logo dinamicamente
+          src={isSidebarCollapsed ? logoColapsado : logoExpandido}
           alt="Logo Fenox"
           className="logo"
         />
       </div>
-      <div className="header-container">   
+
+      <div className="header-container">
         <button className="collapse-btn" onClick={onToggleSidebar}>
           {isSidebarCollapsed ? <FaArrowRight /> : <FaArrowLeft />}
-        </button>     
+        </button>
         <div className="header-container-right align-items-center">
           <button
             className="config-btn config-icon"
