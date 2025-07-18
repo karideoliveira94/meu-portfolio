@@ -1,0 +1,497 @@
+/* Tema */
+body.light-theme,
+body.light-mode.theme-color-default {
+    --bg-body: #e9e9e9;
+    --bg-color: #ffffff;
+    --bg-container: #ffffff;
+    --text-color: #000000;
+    --color-FenoxNovo: #1c2b47;
+    --color-FenoxNovo-hover: #405171;
+    --color-FenoxNovo-subtitulos: #364561;
+    --color-FenoxNovo-subtitulos2: #e9f1ff;
+    --bs-body-bg: #ffffff;
+    --bs-body-color: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --color-fenox: #1c2b47;
+    --selected: #c4c4c4;
+    --bs-secondary-bg: #e9ecef;
+    --bg-color: #E5E5E5;
+    --text-color: #222222;
+    --menu-bg: #f4f4f4;
+    --menu-text: #000000;
+    --text-white: #ffffff;
+    --navbar-width: 256px;
+    --navbar-width-min: 80px;
+    /*--navbar-primary: linear-gradient(0deg, #023f65 0%, #041e42 100%);*/
+    --navbar-primary: #1c2b47;
+    --navbar-secondary: #344767;
+    --navbar-third: #f5f6fa;
+    --navbar-fourth: #8392a5;
+    --navbar-fifth: #344767;
+    --bg-fenox: #1c2b47;
+    --table-row1: #eaeaea;
+    --table-row2: #f5f6fa;
+    --table-bg-hover: #d7d7d7;
+    --os-movel: #87CEEB;
+    --title-gradient: linear-gradient(0deg, #023f65 0%, #041e42 100%);
+    --toggle-border: #8392a5;
+    --toggle-icon: #8392a5;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme {
+    --bg-body: #1e1e1e;
+    --bg-color: #1e1e1e;
+    --bg-container: #333333;
+    --text-color: #f1f1f1;
+    --color-FenoxNovo: #252525;
+    --color-FenoxNovo-hover: #808080;
+    --color-FenoxNovo-subtitulos: #292929;
+    --color-FenoxNovo-subtitulos2: #3b3b3b;
+    --bs-body-bg: #1e1e1e;
+    --bs-body-color: #ffffff;
+    --bs-primary-rgb: #3b3b3b;
+    --color-fenox: #ffffff;
+    --selected: #808080;
+    --bs-secondary-bg: #444444;
+    --bg-color: #181818;
+    --text-color: #f1f1f1;
+    --menu-bg: #2a2a2a;
+    --menu-text: #ffffff;
+    --text-white: #ffffff;
+    --navbar-width: 256px;
+    --navbar-width-min: 80px;
+    /*--navbar-primary: linear-gradient(0deg, #3c3e40 0%, #292c30 100%);*/
+    --navbar-primary: #212121;
+    --navbar-secondary: #5786d5;
+    --navbar-third: #7e7e7e;
+    --navbar-fourth: #8392a5;
+    --navbar-fifth: #2a2a2a;
+    --bg-fenox: #212121;
+    --table-row1: #3c3c3c;
+    --table-row2: #4b4b4b;
+    --table-bg-hover: #616161;
+    --os-movel: #2e4852;
+    --title-gradient: linear-gradient(0deg, #939393 0%, #7d7d7d 100%);
+    --toggle-border: #8392a5;
+    --toggle-icon: #8392a5;
+    --box-shadow-color: rgba(92, 92, 92, 0.4);
+}
+
+body.light-theme.theme-color-blue {
+    --bg-fenox: #0078d4;
+    --navbar-primary: #0078d4;
+    --navbar-secondary: #0078d4;
+    --navbar-fourth: #78aad1;
+    --navbar-fifth: #345267;
+    --toggle-border: #8397a5;
+    --toggle-icon: #8397a5;
+    --title-gradient: linear-gradient(0deg, #59bae1 0%, #0078d4 100%);
+}
+
+body.light-theme.theme-color-red {
+    --bg-fenox: #891b22;
+    --navbar-primary: #891b22;
+    --navbar-secondary: #891b22;
+    --navbar-fourth: #a58383;
+    --navbar-fifth: #673434;
+    --toggle-border: #a58383;
+    --toggle-icon: #a58383;
+    --title-gradient: linear-gradient(0deg, #650202 0%, #420404 100%);
+}
+
+body.light-theme.theme-color-green {
+    --bg-fenox: #3c6745;
+    --navbar-primary: #3c6745;
+    --navbar-secondary: #3c6745;
+    --navbar-fourth: #83a586;
+    --navbar-fifth: #34673d;
+    --toggle-border: #83a595;
+    --toggle-icon: #83a597;
+    --title-gradient: linear-gradient(0deg, #026518 0%, #04420c 100%);
+}
+
+body.light-theme.theme-color-lilac {
+    --bg-fenox: #584673;
+    --navbar-primary: #584673;
+    --navbar-secondary: #584673;
+    --navbar-fourth: #9283a5;
+    --navbar-fifth: #4c3467;
+    --toggle-border: #9583a5;
+    --toggle-icon: #8f83a5;
+    --title-gradient: linear-gradient(0deg, #320265 0%, #2a0442 100%);
+}
+body.light-theme.theme-color-custom {
+    --bg-fenox: var(--theme-custom-color);
+    --navbar-primary: var(--theme-custom-color);
+    --navbar-secondary: var(--theme-custom-color);
+    --navbar-fourth: color-mix(in srgb, var(--theme-custom-color) 60%, white);
+    --navbar-fifth: color-mix(in srgb, var(--theme-custom-color) 80%, black);
+    --toggle-border: var(--navbar-fourth);
+    --toggle-icon: var(--navbar-fourth);
+    --title-gradient: linear-gradient(0deg, color-mix(in srgb, var(--theme-custom-color) 60%, white), var(--theme-custom-color));
+}
+
+/* Mudar a cor do placeholder com temas claro e escuro */
+body.light-theme .form-control::placeholder {
+    color: #6c757d; /* cinza padr�o Bootstrap */
+}
+
+body.dark-theme .form-control::placeholder {
+    color: #ccc;
+}
+
+/* Mudar a cor do icone do input data com temas claro e escuro */
+body.light-theme .form-control[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+}
+
+body.dark-theme .form-control[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* Mudar a cor da seta do dropdown com temas claro e escuro */
+body.light-theme select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%236c757d' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1.5rem; /* aumenta a seta */
+    padding-right: 40px; /* espa�o maior pra seta nova */
+}
+
+body.dark-theme select {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23f1f1f1' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-size: 1.5rem;
+    background-position: right 10px center;
+    padding-right: 40px;
+}
+
+/* Estilo para o react-select no modo claro */
+body.light-theme .react-select__control {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--text-color) !important;
+    border: var(--bs-border-width) solid var(--bs-border-color) !important;
+}
+
+body.light-theme .react-select__menu {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--text-color) !important;
+    margin: 0.2rem 0;
+}
+
+body.light-theme .react-select__option {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--text-color) !important;
+}
+
+body.light-theme .react-select__single-value {
+    color: var(--text-color) !important;
+}
+
+body.light-theme .react-select__option--is-selected {
+    background-color: var(--selected) !important;
+    color: var(--text-color) !important;
+}
+
+/* Estilo para o react-select no modo escuro */
+body.dark-theme .react-select__control {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--text-color) !important;
+    border: var(--bs-border-width) solid var(--bs-border-color) !important;
+}
+
+body.dark-theme .react-select__menu {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--text-color) !important;
+    margin: 0.2rem 0;
+}
+
+body.dark-theme .react-select__option {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--text-color) !important;
+}
+
+body.dark-theme .react-select__option--is-selected {
+    background-color: var(--selected) !important;
+    color: var(--text-color) !important;
+}
+
+/* Estilo para o placeholder no modo claro */
+body.light-theme .react-select__placeholder {
+    color: #6c757d; /* cinza padrão */
+}
+
+/* Estilo para o placeholder no modo escuro */
+body.dark-theme .react-select__placeholder {
+    color: #ccc;
+}
+
+/* Estilo para o ícone no modo claro */
+body.light-theme .react-select__indicator {
+    color: var(--text-color) !important;
+}
+
+/* Estilo para o ícone no modo escuro */
+body.dark-theme .react-select__indicator {
+    color: var(--text-color) !important;
+}
+
+/* Hover das opções no modo claro */
+body.light-theme .react-select__option:hover {
+    background-color: var(--navbar-fourth) !important;
+    color: var(--text-white) !important;
+}
+
+/* Hover das opções no modo escuro */
+body.dark-theme .react-select__option:hover {
+    background-color: var(--color-FenoxNovo-subtitulos2) !important;
+    color: var(--text-color) !important;
+}
+
+/* Estilo para o texto do input no modo escuro */
+body.dark-theme .react-select__single-value {
+    color: var(--text-color) !important;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+.header-fenox {
+    background: var(--bg-fenox);
+    height: 3rem;
+    width: 100%;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: calc(var(--navbar-width) - 16px);
+    transition: width 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header-logo.collapsed {
+    width: calc(var(--navbar-width-min) - 27px);
+    padding: 0 0 0 0.55rem;
+}
+
+.header-logo.expanded {
+    width: calc(var(--navbar-width) - 25px);
+    padding: 0 0 0 0.45rem;
+}
+
+.logo {
+    height: 45px;
+    margin-right: 12px;
+    vertical-align: baseline;
+}
+
+.app-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #003366;
+    margin-top: 4px;
+}
+
+.nav-icon {
+    font-size: 16px;
+}
+.nav-button {
+    background: var(--navbar-fifth);
+    border: 1px solid var(--navbar-third);
+    font-weight: bold;
+    color: var(--text-white);
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+    .nav-button:hover {
+        background-color: var(--navbar-fourth);
+        color: var(--text-white);
+        border: 1px solid var(--navbar-third);
+    }
+
+.icon-img {
+    width: 20px;
+    height: 18px;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+.header-container {
+    padding: 0 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container-right {
+    display: flex;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: var(--text-color);
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+}
+
+    .theme-btn.active {
+        opacity: 1;
+        background-color: var(--color-fenox);
+        color: var(--bg-color);
+        
+    }
+
+
+.user-avatar {
+    font-size: 36px;
+    color: var(--navbar-fourth);
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.user-email {
+    font-size: 12px;
+    color: #555;
+}
+
+.user-info {
+  position: relative;
+}
+
+.user-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.user-tooltip {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: -1rem; 
+  background-color: var(--navbar-fourth);
+  color: var(--text-white);
+  padding: 8px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 3;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.user-icon-wrapper:hover .user-tooltip {
+  display: block;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* .css-13cymwt-control,
+.css-1nmdiq5-menu {
+    background-color: var(--bs-body-bg) !important;
+} */
+
+.text-color-fenox {
+    color: var(--color-fenox);
+}
+
+.text-color-fenox-hover {
+    color: var(--navbar-fourth);
+}
+
+.collapse-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 10px;
+  display: flex;
+}
+
+@media (max-width: 915px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 16px;
+    }
+
+    .header-left,
+    .header-center,
+    .header-right {
+        width: 100%;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+    }
+
+    .header-left {
+        margin-bottom: 10px;
+    }
+
+    .header-center {
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .header-right {
+        justify-content: space-evenly;
+    }
+
+    .app-title {
+        font-size: 16px;
+    }
+
+    .nav-button {
+        font-size: 13px;
+        padding: 6px 12px;
+        gap: 6px;
+    }
+
+    .theme-btn {
+        font-size: 14px;
+        padding: 6px;
+    }
+    
+    .topo-dashboard {
+        flex-wrap: wrap;
+    }
+    
+    .filtros-periodo{
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

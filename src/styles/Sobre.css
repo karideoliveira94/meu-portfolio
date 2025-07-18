@@ -1,0 +1,100 @@
+.sobre-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #333;
+}
+
+.sobre-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Cards */
+.sobre-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  /* Removido opacity 0 para evitar invisibilidade */
+}
+
+.sobre-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-card h5 {
+  font-size: 1.2rem;
+}
+
+.sobre-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sobre-card ul li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #444;
+}
+
+/* Ícones coloridos */
+.icon {
+  font-size: 1.4rem;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.icon.react {
+  color: #61DBFB;
+}
+
+.icon.js {
+  color: #F7E018;
+}
+
+.icon.html {
+  color: #E34F26;
+}
+
+.icon.css {
+  color: #264DE4;
+}
+
+.icon.figma {
+  color: #A259FF;
+}
+
+.icon.git {
+  color: #F05033;
+}
+
+.icon.microsoft {
+  color: #0078D4;
+}
+
+.icon.default {
+  color: #6c757d;
+}
+
+/* Animação fade + slide */
+.fade-in {
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

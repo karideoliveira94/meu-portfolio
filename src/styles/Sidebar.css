@@ -1,0 +1,152 @@
+.sidebar {
+  width: var(--navbar-width);
+  background-color: var(--bg-fenox);
+  color: white;
+  height: calc(100vh - 3rem);
+  position: relative;
+  left: 0;
+  overflow-y: auto;
+  transition: width 0.3s;
+  z-index: 2;
+}
+
+.sidebar.collapsed {
+  width: calc(var(--navbar-width-min) - 25px);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .icon {
+  font-size: 18px;
+}
+
+.sidebar .label {
+  margin-left: 10px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+
+#nav-content {
+    margin: 0 0 3px 0;
+    position: relative;
+    flex: 1;
+    /* width: var(--navbar-width); */
+    box-shadow: 0 0 0 16px var(--navbar-primary);
+    direction: rtl;
+    /* overflow-x: hidden; */
+    transition: width 0.2s;
+}
+
+    #nav-content::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    #nav-content::-webkit-scrollbar-thumb {
+        border-radius: 99px;
+        background-color: var(--navbar-fourth);
+    }
+
+    #nav-content::-webkit-scrollbar-button {
+        height: 16px;
+    }
+
+    .nav-button1:hover i,
+    .nav-button1:hover svg,
+    .nav-button1:hover p,
+    .nav-button1:hover span {
+        color: var(--text-color);
+    }
+
+    .nav-button1 {
+    position: relative;
+    margin-left: 16px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    color: var(--text-white);
+    direction: ltr;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.2s;
+}
+
+    .nav-button1 span {
+        transition: opacity 1s;
+    }
+
+    .nav-button1 .far {
+        transition: min-width 0.2s;
+    }
+
+
+.icon-wrapper1 {
+    min-width: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-content-highlight {
+    position: absolute;
+    left: 5px;
+    top: 0; /* Deixe o top fixo */
+    width: calc(100% - 5px);
+    height: 54px;
+    background: var(--bg-color);
+    background-attachment: fixed;
+    border-radius: 16px 0 0 16px;
+    transition: top 0.2s, opacity 0.2s;
+    opacity: 0; /* Oculto por padrão */
+    pointer-events: none;
+}
+
+    #nav-content-highlight:before, #nav-content-highlight:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        box-shadow: 16px 16px var(--bg-color);
+    }
+
+    #nav-content-highlight:after {
+        top: 100%;
+        box-shadow: 16px -16px var(--bg-color);
+    }
+
+@media (max-width: 768px) {
+  .layout-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .collapse-btn {
+    opacity: 0;
+  }
+}

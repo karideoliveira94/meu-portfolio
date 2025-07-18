@@ -1,0 +1,78 @@
+.layout-wrapper {
+  display: flex;
+  height: calc(100vh - 3rem);
+}
+
+.layout-content {
+  display: flex;
+  flex: 1;
+}
+
+.main-content {
+  display: flex;
+  flex: 1 1;
+  padding: 1rem;
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-fenox {
+  color: var(--text-white);
+  background-color: var(--navbar-fourth);
+  border-color: var(--navbar-secondary);
+}
+
+  .btn-fenox:hover {
+    color: var(--text-white);
+    background-color: var(--navbar-fifth);
+    border-color: var(--toggle-border);
+  }
+
+  .btn-fenox.active {
+    
+    color: var(--text-white);
+    background-color: var(--navbar-secondary);
+    border-color: var(--toggle-border);
+  }
+
+  .border-fenox {
+    border-color: var(--toggle-border) !important;
+  }
+
+  /* começo dos estilos para o input switch */
+  .form-check-input:checked {
+    background-color: var(--navbar-secondary);
+    border-color: var(--navbar-secondary);
+  }
+
+  .form-check-input:focus {
+    border-color: var(--navbar-secondary);
+    outline: 0;
+    box-shadow: 0 0 0 .25rem var(--navbar-secondary);
+  }
+
+  .form-switch .form-check-input:focus {
+    --bs-form-switch-bg: url(data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%280, 0, 0, 0.25%29%27/%3e%3c/svg%3e);
+  }
+  /* fim dos estilos para o input switch */
+
+  /* Começo da estilização de todas as scrollbars do site */
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background-color: var(--navbar-fourth);
+}
+
+  *::-webkit-scrollbar-button {
+    height: 16px;
+  }
+ /* Fim da estilização de todas as scrollbars do site */
+
+ .bg-white-fenox {
+  background-color: var(--menu-bg);
+ }
