@@ -11,3 +11,235 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h2, h3, h4 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; 
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+h2:hover, h3:hover, h4:hover {
+  color: var(--navbar-secondary);
+}
+
+h2::after, h3::after, h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--navbar-fourth), var(--navbar-secondary));
+  transition: width 0.3s ease-in-out;
+}
+
+h2:hover::after, h3:hover::after, h4:hover::after {
+  width: 100%;
+}
+
+.shadow-card {
+  box-shadow: 0 0 10px var(--text-color);
+}
+
+.shadow-card:hover {
+  box-shadow: 0 0 20px var(--text-color) !important;
+}
+
+/* estilo de botão 1 */
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: var(--text-white);
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+.btn-12 {
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    box-shadow: none;
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+}
+
+    .btn-12 span {
+        background: linear-gradient(0deg, var(--navbar-primary) 0%, var(--navbar-fifth) 100%);
+        display: block;
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+        border-radius: 5px;
+        margin: 0;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+        .btn-12 span:nth-child(1) {
+            box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+            -webkit-transform: rotateX(90deg);
+            -moz-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+            -webkit-transform-origin: 50% 50% -20px;
+            -moz-transform-origin: 50% 50% -20px;
+            transform-origin: 50% 50% -20px;
+        }
+
+        .btn-12 span:nth-child(2) {
+            -webkit-transform: rotateX(0deg);
+            -moz-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+            -webkit-transform-origin: 50% 50% -20px;
+            -moz-transform-origin: 50% 50% -20px;
+            transform-origin: 50% 50% -20px;
+        }
+
+    .btn-12:hover span:nth-child(1) {
+        box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+
+    .btn-12:hover span:nth-child(2) {
+        box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+        color: transparent;
+        -webkit-transform: rotateX(-90deg);
+        -moz-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+    }
+
+/* estilo de botão 2 */
+.btn-action {
+  padding: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all .5s ease;
+}
+
+.btn--action {
+  border-radius: 0.8rem;
+  background-color: var(--navbar-fifth);
+  color: var(--text-white);
+  border: 1px solid var(--navbar-fourth);
+  transition: all .5s ease 0s;
+  box-shadow: 0 6px var(--navbar-fourth);
+}
+
+  .btn--action span {
+    display: inline-block;
+    position: relative;
+    transition: all .5s ease;
+  }
+
+    .btn--action span:before {
+      content: '\f06e';
+      color: var(--text-white);
+      font-size: 1.2rem;
+      font-family: FontAwesome;
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      left: 1.5rem;
+      opacity: 0;
+      transition: all .1s ease 0s;
+    }
+
+    .btn--action:hover span {
+      padding-left: 1.5rem;
+      color: #fff;
+    }
+
+      .btn--action:hover span:before {
+        left: 0;
+        opacity: 1;
+      }
+
+    .btn--action:active {
+        box-shadow: 0 5px var(--navbar-secondary);
+        transform: translateY(5px);
+    }
+
+/* estilo de botão 3 */
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: var(--navbar-fourth);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bs-body-bg);
+  left: 0;
+  top: 0;
+  border: 1px solid var(--navbar-fourth);
+  border-radius: 5px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}

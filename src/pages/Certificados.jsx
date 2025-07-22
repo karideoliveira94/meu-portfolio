@@ -59,12 +59,15 @@ const Certificados = () => {
 
   return (
     <section className="container">
-      <h2 className="text-center fw-bold mb-5">Meus Certificados</h2>
+      <div className="text-center">
+        <h2 className="text-center fw-bold mb-5">Meus Certificados</h2>
+      </div>
+      
       <div className="row g-4">
         {certificados.map((cert, index) => (
           <div className="col-12 col-sm-6 col-md-4" key={index}>
             <div
-              className="card h-100 shadow-sm border-0 rounded-4"
+              className="card h-100 shadow-card border-0 rounded-4"
               onClick={() => handleOpen(index)}
               style={{ cursor: "pointer" }}
             >

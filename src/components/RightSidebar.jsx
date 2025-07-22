@@ -162,8 +162,8 @@ const RightSidebar = ({ isOpen, onClose }) => {
                     <h5>Onde me encontrar</h5>
                     <div className="card-container">
                         {[
-                        { href: 'https://www.linkedin.com/in/karinadeoliveira/', icon: 'fa-user', label: 'LinkedIn' },
-                        { href: 'https://github.com/karideoliveira94', icon: 'fa-building', label: 'Github' },
+                        { href: 'https://www.linkedin.com/in/karinadeoliveira/', icon: 'fa-brands fa-linkedin-in', label: 'LinkedIn' },
+                        { href: 'https://github.com/karideoliveira94', icon: 'fa-brands fa-github', label: 'Github' },
                         ].map(({ href, icon, label }) => (
                         <a href={href} className="card-sites-link" target="_blank" rel="noopener noreferrer" key={href}>
                             <div className="card-sites">

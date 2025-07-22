@@ -1,6 +1,6 @@
 import React from "react";
 import projetoMove from '../assets/projeto-move.png';
-import projetoMusicApp from '../assets/projeto-barbearia.png';
+import projetoMusicApp from '../assets/projeto-musicapp.png';
 import projetoTodoApp from '../assets/projeto-Todo.png';
 import projetoBarber from '../assets/projeto-barbearia.png';
 
@@ -34,11 +34,14 @@ const figmaProjects = [
 const FigmaPortfolio = () => {
   return (
     <section className="container">
-      <h2 className="text-center fw-bold mb-5">Meus Projetos no Figma</h2>
+      <div className="text-center">
+        <h2 className="fw-bold mb-5">Meus Projetos no Figma</h2>
+      </div>
+      
       <div className="row g-4">
         {figmaProjects.map((project, index) => (
           <div className="col-12 col-sm-6 col-md-4" key={index}>
-            <div className="card h-100 shadow-sm border-0 rounded-4">
+            <div className="card h-100 shadow-card border-0 rounded-4">
               <img
                 src={project.image}
                 className="card-img-top rounded-top-4"
@@ -48,14 +51,11 @@ const FigmaPortfolio = () => {
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{project.title}</h5>
                 <p className="card-text flex-grow-1">{project.description}</p>
-                <a
-                  href={project.link}
-                  className="btn btn-outline-primary mt-auto"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Ver no Figma →
-                </a>
+                <div className="d-flex justify-content-end">
+                  <button href={project.link} className="glow-on-hover" target="_blank" rel="noopener noreferrer" >
+                    Ver no Figma →
+                  </button>
+                </div>                
               </div>
             </div>
           </div>

@@ -22,7 +22,9 @@ const Sobre = () => {
 
   return (
     <section className="container sobre-container">
-      <h2 className="text-center fw-bold mb-5">Sobre Mim</h2>
+      <div className="text-center">
+        <h2 className="text-center fw-bold mb-5">Sobre Mim</h2>
+      </div>
 
       <div className="sobre-texto">
         <p>
@@ -48,7 +50,7 @@ const Sobre = () => {
         </p>
       </div>
 
-      <h4 className="text-center mt-5">💻 Tecnologias e Ferramentas</h4>
+      <h4 className="text-center mt-5">Tecnologias e Ferramentas</h4>
 
       <div className="row mt-4 g-4">
         {/* Card Front-end */}

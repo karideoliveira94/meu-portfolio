@@ -21,6 +21,7 @@ const destaques = [
 
 const Projetos = () => {
   const [repos, setRepos] = useState([]);
+  console.log(repos); // apenas para não dar warning
   const [recentes, setRecentes] = useState([]);
   const [restantes, setRestantes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -52,8 +53,10 @@ const Projetos = () => {
   }, []);
 
   return (
-    <section className="container py-5">
-      <h2 className="text-center fw-bold mb-5">Meus Projetos no GitHub</h2>
+    <section className="container">
+      <div className="text-center">
+        <h2 className="fw-bold mb-5">Meus Projetos no GitHub</h2>
+      </div>
 
       {/* Projetos em destaque (manual) */}
       {destaques.length > 0 && (
@@ -62,7 +65,7 @@ const Projetos = () => {
           <div className="row g-4 mb-5">
             {destaques.map((proj, index) => (
               <div className="col-12 col-sm-6 col-md-4" key={index}>
-                <div className="card h-100 shadow-sm border-0 rounded-4">
+                <div className="card h-100 shadow-card border-0 rounded-4">
                   <img
                     src={proj.image}
                     className="card-img-top rounded-top-4"
@@ -72,14 +75,12 @@ const Projetos = () => {
                   <div className="card-body d-flex flex-column">
                     <h5 className="card-title">{proj.name}</h5>
                     <p className="card-text flex-grow-1">{proj.description}</p>
-                    <a
-                      href={proj.link}
-                      className="btn btn-outline-dark mt-auto"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Ver no GitHub →
-                    </a>
+                    <div className="d-flex justify-content-end">
+                      <button href={proj.link} className="custom-btn btn-12" target="_blank" rel="noopener noreferrer" >
+                        <span>Clique para ver</span>
+                        <span>Ver no GitHub</span>     
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -95,7 +96,7 @@ const Projetos = () => {
           <div className="row g-4 mb-5">
             {recentes.map((repo) => (
               <div className="col-12 col-sm-6 col-md-4" key={repo.id}>
-                <div className="card h-100 shadow-sm border-0 rounded-4">
+                <div className="card h-100 shadow-card border-0 rounded-4">
                   <div className="card-body d-flex flex-column">
                     <h5 className="card-title">{repo.name}</h5>
                     <p className="card-text flex-grow-1">
@@ -104,14 +105,12 @@ const Projetos = () => {
                     <p className="text-muted mb-2">
                       Linguagem: {repo.language || "Não especificada"}
                     </p>
-                    <a
-                      href={repo.html_url}
-                      className="btn btn-outline-primary mt-auto"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Ver no GitHub →
-                    </a>
+                    <div className="d-flex justify-content-end">
+                      <button href={repo.html_url} className="custom-btn btn-12" target="_blank" rel="noopener noreferrer" >
+                        <span>Clique para ver</span>
+                        <span>Ver no GitHub</span>                      
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -135,9 +134,9 @@ const Projetos = () => {
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-sm btn-primary"
+                  className="btn-action btn--action"
                 >
-                  Ver
+                  <span>Ver</span>
                 </a>
               </li>
             ))}
