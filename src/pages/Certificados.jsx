@@ -3,12 +3,32 @@ import { Modal, Button } from "react-bootstrap";
 import certificadoFullStack from '../assets/certificados/Certificado-fullstack.jpg';
 import certificadoFrontEnd from '../assets/certificados/Certificado-frontend.jpg';
 import certificadoHTMLCSS from '../assets/certificados/Certificado-htmlcss.jpg';
+import certificadoJS from '../assets/certificados/Certificado-js.jpg';
+import certificadoWebDeveloper from '../assets/certificados/Certificado-WebDeveloper.jpg';
+import certificadoIngles from '../assets/certificados/Certificado-Ingles.jpg';
+import certificadoGitEGithub from '../assets/certificados/Introdução-GIT-e-GitHub.jpg';
+import certificadoLogicaDeProgramacao from '../assets/certificados/Logica-de-Programação.jpg';
+import certificadoReactParaInternet from '../assets/certificados/React-aplicações-para-internet.jpg';
+import certificadoReactAvancado from '../assets/certificados/React-avançado.jpg';
+import certificadoReactComponentes from '../assets/certificados/React-Componentes.jpg';
+import certificadoReactHooks from '../assets/certificados/React-Hook.jpg';
+import certificadoReactIntroducao from '../assets/certificados/ReactJS-Introdução.jpg';
 import '../styles/Certificados.css';
 
 const certificados = [
   { title: "Certificado FullStack", image: certificadoFullStack },
   { title: "Certificado Front End", image: certificadoFrontEnd },
-  { title: "Certificado Html e Css", image: certificadoHTMLCSS }
+  { title: "Certificado Html e Css", image: certificadoHTMLCSS },
+  { title: "Certificado Introdução à programação com JS", image: certificadoJS },  
+  { title: "Certificado Git e GitHub", image: certificadoGitEGithub },    
+  { title: "Certificado React - Introdução", image: certificadoReactIntroducao },
+  { title: "Certificado React - Componentes", image: certificadoReactComponentes },
+  { title: "Certificado React - Hooks", image: certificadoReactHooks },
+  { title: "Certificado React - Aplicações para Internet", image: certificadoReactParaInternet },
+  { title: "Certificado React - Práticas Avançadas", image: certificadoReactAvancado },
+  { title: "Certificado Lógica de Programação", image: certificadoLogicaDeProgramacao },
+  { title: "Certificado WebDeveloper", image: certificadoWebDeveloper },
+  { title: "Certificado Língua Inglesa", image: certificadoIngles },
 ];
 
 const Certificados = () => {

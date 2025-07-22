@@ -28,8 +28,9 @@ const Sobre = () => {
 
       <div className="sobre-texto">
         <p>
-          Sou <strong>desenvolvedora front-end</strong> com 3 anos de experiência,
-          apaixonada por criar interfaces funcionais, modernas e acessíveis.
+          Sou <strong>desenvolvedora front-end</strong> com 3 anos de experiência, 
+          formada em análise e desenvolvimento de sistemas. 
+          Apaixonada por criar interfaces funcionais, modernas e acessíveis.
           Atuo com foco em <strong>React, HTML, CSS e JavaScript</strong>, além
           de ter vivência prática em projetos com <strong>.NET</strong> (C#,
           Blazor, MVC e WebForms).
