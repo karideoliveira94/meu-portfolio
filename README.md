@@ -25,33 +25,31 @@ Bem-vindo ao meu portfólio pessoal! Aqui você encontra meus projetos, certific
 
 ## 💻 Como Rodar Localmente
 
-1. Clone o repositório:  
+1. Clone o repositório:
     ```bash
     git clone https://github.com/seu-usuario/meu-portfolio.git
-2. Instale as dependências:
     cd meu-portfolio
+    ```
+2. Instale as dependências:
+    ```bash
     npm install
+    ```
 3. Inicie o servidor de desenvolvimento:
-    npm start
+    ```bash
+    npm run dev
+    ```
 
-Abra http://localhost:3000 no seu navegador para ver o projeto.
+Abra http://localhost:5173 no seu navegador para ver o projeto.
 
 ---
 
 ## 📦 Scripts Disponíveis
 
-Este projeto foi criado com Create React App.
-
 No diretório do projeto, você pode executar:
 
-npm start
-Executa o app no modo de desenvolvimento.
-Abra http://localhost:3000 para visualizar no navegador.
-A página recarrega automaticamente ao fazer alterações.
+- `npm run dev` - Servidor de desenvolvimento (HMR, reload rápido)
+- `npm run build` - Build de produção em `dist/`
+- `npm run preview` - Preview local da build de produção
+- `npm test` - Comando placeholder (sem runner configurado)
 
 ---
-
-## 📚 Para Saber Mais
-
-- [Documentação Create React App](https://create-react-app.dev/docs/getting-started/)
-- [Documentação React](https://react.dev)
