@@ -76,7 +76,7 @@ const Projetos = () => {
                     <h5 className="card-title">{proj.name}</h5>
                     <p className="card-text flex-grow-1">{proj.description}</p>
                     <div className="d-flex justify-content-end">
-                      <button href={proj.link} className="custom-btn btn-12" target="_blank" rel="noopener noreferrer" >
+                      <button onClick={() => window.open(proj.link, '_blank')} className="custom-btn btn-12" target="_blank" rel="noopener noreferrer" >
                         <span>Clique para ver</span>
                         <span>Ver no GitHub</span>     
                       </button>
@@ -106,7 +106,7 @@ const Projetos = () => {
                       Linguagem: {repo.language || "Não especificada"}
                     </p>
                     <div className="d-flex justify-content-end">
-                      <button href={repo.html_url} className="custom-btn btn-12" target="_blank" rel="noopener noreferrer" >
+                      <button onClick={() => window.open(repo.html_url, '_blank')} className="custom-btn btn-12" target="_blank" rel="noopener noreferrer" >
                         <span>Clique para ver</span>
                         <span>Ver no GitHub</span>                      
                       </button>

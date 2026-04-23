@@ -27,7 +27,7 @@ Bem-vindo ao meu portfólio pessoal! Aqui você encontra meus projetos, certific
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/meu-portfolio.git
+    git clone https://github.com/karideoliveira94/meu-portfolio
     cd meu-portfolio
     ```
 2. Instale as dependências:

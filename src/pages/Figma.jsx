@@ -52,7 +52,7 @@ const FigmaPortfolio = () => {
                 <h5 className="card-title">{project.title}</h5>
                 <p className="card-text flex-grow-1">{project.description}</p>
                 <div className="d-flex justify-content-end">
-                  <button href={project.link} className="glow-on-hover" target="_blank" rel="noopener noreferrer" >
+                  <button onClick={() => window.open(project.link, '_blank')} className="glow-on-hover" target="_blank" rel="noopener noreferrer" >
                     Ver no Figma →
                   </button>
                 </div>                
